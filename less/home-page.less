@@ -56,9 +56,7 @@
         margin-bottom: 26px;
       }
 
-      .btn{
-        
-         }
+      
       }
     }
 
@@ -74,19 +72,21 @@
     }
 }// home
 
-
-.btn{
-  background:@bgcolor;
-  padding:@padding;
-  max-width: 100px;
-  border-radius:@border-radius;
-  color:@color;
-  font-size: @font;
+.header-img{
+  margin-top:60px;
+}
+.btn{  
+  .button(@btn-bg-color, @padding, @porcelain);
+  text-align:center;
+  width:80px;
+  border-radius: 5px;
+  font-size: 1.3rem;
 }
    .btn:hover{
      background:blue;
      color:salmon;
    }
+
 
 .container{
 @media @phone{  
@@ -117,13 +117,48 @@ img{
     width:100%;
   }
 }
-nav{
+.home .walk{
   @media @phone{
     display:flex;
+    flex-direction: column-reverse;
     justify-content: center;
     align-content: center;
-    font-size: 1rem;
-    flex-wrap: wrap;
-    
+    padding: 0;
   }
+}
+@media @phone{
+  .container {
+    width:100%;
+    margin: 0;
+  }
+  .sky{
+    display:none;
+  }
+  .launch{
+    display:none;
+  }
+  .home .walk .walk-text{
+    display:flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        margin: 1%;
+        margin-top:3%;
+        width:100%;
+  }
+  
+  .home .walk-img{
+    width:98%;
+    margin-top:5%;
+    margin:0;
+    align-content:center;
+  }
+}
+@media @phone{
+  .btn{
+    width:100%;
+    font-size:2rem;
+  }
+ .home .space-images img{
+   width:100%;
+ }
 }
