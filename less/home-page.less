@@ -3,8 +3,7 @@
 .home {
 
   .intro {
-
-    h2 {
+        h2 {
       padding: 15px;
     }
 
@@ -57,7 +56,7 @@
         margin-bottom: 26px;
       }
 
-      .btn {
+      
       }
     }
 
@@ -71,5 +70,95 @@
         border-radius: 10px;
       }
     }
-  }
 }// home
+
+.header-img{
+  margin-top:60px;
+}
+.btn{  
+  .button(@btn-bg-color, @padding, @porcelain);
+  text-align:center;
+  width:80px;
+  border-radius: 5px;
+  font-size: 1.3rem;
+}
+   .btn:hover{
+     background:blue;
+     color:salmon;
+   }
+
+
+.container{
+@media @phone{  
+    width:80%;
+    margin:10px;
+  }
+}
+img{
+@media @phone{
+    width:100%;
+  }
+}
+.intro{
+@media @phone{
+    width:100%;
+    display:flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+  .space-images{
+    @media  @phone{
+    display:flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+  }
+}
+.home .walk{
+  @media @phone{
+    display:flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-content: center;
+    padding: 0;
+  }
+}
+@media @phone{
+  .container {
+    width:100%;
+    margin: 0;
+  }
+  .sky{
+    display:none;
+  }
+  .launch{
+    display:none;
+  }
+  .home .walk .walk-text{
+    display:flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        margin: 1%;
+        margin-top:3%;
+        width:100%;
+  }
+  
+  .home .walk-img{
+    width:98%;
+    margin-top:5%;
+    margin:0;
+    align-content:center;
+  }
+}
+@media @phone{
+  .btn{
+    width:100%;
+    font-size:2rem;
+  }
+ .home .space-images img{
+   width:100%;
+ }
+}
